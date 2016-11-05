@@ -1,0 +1,57 @@
+/* Default styles first then media queries */
+@media screen and (min-width: 400px)  {
+	.home img {
+		width: 10%;
+	}
+}
+
+@media screen and (min-width: 600px)  {
+	.home img {
+	   width: 100%;
+	}
+}
+
+@media screen and (min-width: 1000px) {
+	.home img {
+	   width: 100%;
+	}
+}
+
+@media screen and (min-width: 1400px) {
+	.home img {
+		display: block;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		background: url("../img/home_page_1366_768.png") no-repeat;
+		width: 100%; /* Width of new image */
+	}
+}
+
+#myPhrase {	
+	color: white;
+	position: absolute; 
+	top: 20%;
+	left: 20%;
+	width: 100%; 
+}
+
+#aboutMe h1{
+	text-align: center;
+}
+
+#aboutMe img{
+	float: left;
+}
+
+#resume h1{
+	text-align: center;
+}
+
+#contactMe h1{
+	text-align: center;
+}
+
+#conctMe form{
+	display: inline-block;
+	text-align: center;
+}

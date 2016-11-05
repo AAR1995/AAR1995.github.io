@@ -1,0 +1,23 @@
+#nav_bar{
+	background-color: skyblue;
+	font-size: 16px;
+	height: 35px;
+	text-align: right;
+}
+
+#nav_bar ul{
+	height: auto;
+}
+
+#nav_bar li{
+	display: inline;
+}
+
+#nav_bar a{
+	text-decoration: none;
+	padding: 4px;
+}
+
+#nav_bar a:hover{
+	color:	white;
+}
