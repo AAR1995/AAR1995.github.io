@@ -16,7 +16,7 @@ a{
 	color: gray;
 	text-decoration: none;
 	text-align: center;
-    padding: 24px 10px;
+    padding: 14px 10px;
 }
 
 a:hover{
@@ -29,7 +29,7 @@ a:hover{
 	font-weight: bold;
 	color: gray;
 	text-align: center;
-    padding: 24px;
+    padding: 14px;
 
     float: right;
 }
