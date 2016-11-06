@@ -1,23 +1,53 @@
-#nav_bar{
-	background-color: skyblue;
-	font-size: 16px;
-	height: 35px;
-	text-align: right;
+ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: black;
 }
 
-#nav_bar ul{
-	height: auto;
+li{
+    float: left;
 }
 
-#nav_bar li{
-	display: inline;
-}
-
-#nav_bar a{
+a{
+	display: block;
+	color: gray;
 	text-decoration: none;
-	padding: 4px;
+	text-align: center;
+    padding: 14px 16px;
 }
 
-#nav_bar a:hover{
+a:hover{
 	color:	white;
+}
+
+#my_name{
+	display: block;
+	font-weight: bold;
+	color: gray;
+	text-align: center;
+    padding: 14px 16px;
+
+    float: right;
+}
+
+/*Web Browsers 400px or larger*/
+@media screen and (min-width: 400px)  {
+	
+}
+
+/*Web Browsers 600px or larger*/
+@media screen and (min-width: 600px)  {
+	
+}
+
+/*Web Browsers 1000px or larger*/
+@media screen and (min-width: 1000px) {
+	
+}
+
+/*Web Browsers 1400px or larger*/
+@media screen and (min-width: 1400px) {
+	
 }
