@@ -11,12 +11,12 @@ li{
 }
 
 a{
-	font-size: 20px;
+	font-size: 14px;
 	display: block;
 	color: gray;
 	text-decoration: none;
 	text-align: center;
-    padding: 24px 16px;
+    padding: 24px 10px;
 }
 
 a:hover{
@@ -24,7 +24,7 @@ a:hover{
 }
 
 #my_name{
-	font-size: 20px;
+	font-size: 14px;
 	display: block;
 	font-weight: bold;
 	color: gray;
