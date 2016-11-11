@@ -6,26 +6,6 @@ body{
 	background-size: cover;
 }
 
-@media screen and (min-width: 400px)  {
-	
-}
-
-@media screen and (min-width: 600px)  {
-	
-}
-
-@media screen and (min-width: 1000px) {
-	
-}
-
-@media screen and (min-width: 1400px) {
-	body{
-		background-repeat: no-repeat;
-		background-image: url("../img/home_page_1366_768.png");
-		background-size: cover;
-	}
-}
-
 #myPhrase {	
 	color: white;
 }
@@ -34,8 +14,13 @@ body{
 	text-align: center;
 }
 
-#aboutMe img{
+#aboutMe img{	
 	float: left;
+}
+
+#aboutMe p{
+	color: white;
+	background-color: black;
 }
 
 #resume h1{
@@ -46,7 +31,66 @@ body{
 	text-align: center;
 }
 
-#conctMe form{
-	display: inline-block;
-	text-align: center;
+#contactMe textarea{
+	width: 50%;
+	height: 100px;
+}
+
+#cancel_form{
+	margin-left: 10px;
+}
+
+/*Web Browsers 600px or larger*/
+@media screen and (min-width: 600px)  {
+	
+}
+
+/*Web Browsers 1000px or larger*/
+@media screen and (min-width: 1000px) {
+	#aboutMe h1{
+		text-align: center;
+	}
+
+	#aboutMe p{
+		color: white;
+		background-color: black;
+		font-size: 24px;
+	}
+
+	#resume img{
+		content: url("../img/resume.jpg");
+	}
+
+	#resume h1{
+		color: white;
+	}
+
+	#aboutMe h1{
+		color: white;
+	}
+
+	#contactMe h1{
+		color: white;
+	}
+
+	#contactMe form{
+		color: white;
+	}
+
+	#contactMe textarea{
+		width: 20%;
+		height: 100px;
+	}
+
+	body{
+		background-repeat: no-repeat;
+		background-image: url("../img/home_page_1366_768.png");
+		background-size: cover;
+	}
+	
+}
+
+/*Web Browsers 1400px or larger*/
+@media screen and (min-width: 1400px) {
+	
 }

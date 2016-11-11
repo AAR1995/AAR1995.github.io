@@ -8,26 +8,24 @@
 		<link href="css/nav_bar.css" rel="stylesheet">
 		<link href="css/project.css" rel="stylesheet">
 
+	    <script src="js/contact_me.js"></script>
+
 	</head>
 
 	<body>
-
 		<!-- Navigation Bar -->
-		<ul>
+		<ul id="nav-bar">
 			<li><a href="index.html">Home</a></li>
-			<li><a href="about_me.html">About</a></li>
+			<li><a href="about_me.html">About Me</a></li>
 			<li><a href="resume.html">Resume</a></li>
 			<li><a href="contact_me.html">Contact Me</a></li>
-			<li id="my_name">Alfonso Almazan Ruelas</li>
 		</ul>
 
 		<!-- Contact Me -->
 		<div id="contactMe">
-			<h1>Contact Me</h1>
-			<form action="#ContactMe">
-				<input id="email" type="button" value="Email">
-				<input id="linked_in" type="button" value="Linked In">
-			</form>
+			<h1>Contact Me</h1>	
+			<button id="email" onclick="createEmailForm()">Email</button>
+			<button id="linked_in" onclick="onLinkedInButtonClick()">Linked In</button>
 		</div>
 	</body>
 

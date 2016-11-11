@@ -1,16 +1,17 @@
-ul{
+#nav-bar{
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
 	background-color: black;
+	background-size: 100px;
 }
 
-li{
+#nav-bar li{
     float: left;
 }
 
-a{
+#nav-bar li a{
 	font-size: 14px;
 	display: block;
 	color: gray;
@@ -19,7 +20,7 @@ a{
     padding: 14px 10px;
 }
 
-a:hover{
+#nav-bar li a:hover{
 	color:	white;
 }
 
