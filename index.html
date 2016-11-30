@@ -3,26 +3,113 @@
 
 	<head>
 		<meta name="author" content="Alfonso Almazan Ruelas">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<link href="css/nav_bar.css" rel="stylesheet">
 		<link href="css/project.css" rel="stylesheet">
 
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-red.min.css">
+		<script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+
+		<script src="js/contact_me.js"></script>
+
 	</head>
 
 	<body>
-		<!-- Navigation Bar -->
-		<ul id="nav-bar">
-			<li><a href="index.html">Home</a></li>
-			<li><a href="about_me.html">About Me</a></li>
-			<li><a href="resume.html">Resume</a></li>
-			<li><a href="contact_me.html">Contact Me</a></li>
-			<!-- <li id="my_name">Alfonso Almazan Ruelas</li> -->
-		</ul>
+		<div class="demo-layout-transparent mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--no-desktop-drawer-button">
+			<header class="mdl-layout__header mdl-layout__header--transparent">
+				<div class="mdl-layout__header-row mdl-layout--large-screen-only">
+					<!-- Title -->
+					<span class="mdl-layout-title">Alfonso Almazan Ruelas</span>
+					<!-- Add spacer, to align navigation to the right -->
+					<div class="mdl-layout-spacer"></div>
+					<!-- Navigation -->
+					<nav class="mdl-navigation">
+						<a class="mdl-navigation__link" href="index.html">Home</a>
+						<a class="mdl-navigation__link" href="about_me.html">About Me</a>
+						<a class="mdl-navigation__link" href="resume.html">Resume</a>
+						<a class="mdl-navigation__link" href="projects.html">Projects</a>
+					</nav>
+				</div>
+			</header>
+			
+			<div class="mdl-layout__drawer">
+				<span class="mdl-layout-title">Alfonso Almazan R.</span>
+				<nav class="mdl-navigation">
+					<a class="mdl-navigation__link" href="index.html">Home</a>
+					<a class="mdl-navigation__link" href="about_me.html">About Me</a>
+					<a class="mdl-navigation__link" href="resume.html">Resume</a>
+					<a class="mdl-navigation__link" href="projects.html">Projects</a>
+				</nav>
+			</div>
+		
+			<main class="mdl-layout__content">
+				<div class="home">
+					<h4 id="myPhrase" style="color:white">"The World is our <br/>Playground"</h4>
+				</div>
 
-		<!-- Home -->
-		<div class="home">
-			<h2 id="myPhrase">The World is our <br/>Playground</h4>
+				<div id=SocialMedia>
+					<a id=LinkedIn href="https://www.linkedin.com/pub/alfonso-almazan-ruelas/130/382/a7b" target="_blank">
+	      
+				          <img src="https://static.licdn.com/scds/common/u/img/webpromo/btn_viewmy_160x33.png" alt="View Alfonso Almazan Ruelas's profile on LinkedIn">
+				        
+				    </a>
+			   
+			    	<a href="https://www.facebook.com/alfonso.almazan.16" target="_blank">
+				          <img src="img/FB-f-Logo__blue_50.png" alt="View Alfonso Almazan Ruelas's profile on Facebook">
+				    </a>
+			    </div>
+
+			    <div id=contactMeBtn>
+					<button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" onclick="displayContactForm()">
+				  		<i class="material-icons" >contact_mail</i>
+					</button>
+				</div>
+
+				<div id=contactMeForm class="mdl-card">
+					  <div id=title class="mdl-card__title">
+							Contact Me
+					  </div>
+					  <div class="mdl-card__supporting-text">
+					  		<!-- Simple Textfield -->
+							<form method="post" action="form-to-email.php">
+							  	<div class="mdl-textfield mdl-js-textfield">
+							    	<input id="email" name="email" class="mdl-textfield__input" type="email"/>
+							    	<label class="mdl-textfield__label" for="email">Email...</label>
+							    	<span class="mdl-textfield__error">Input is not a valid email.</span>
+							  	</div>
+							  	<div class="mdl-textfield mdl-js-textfield">
+							    	<input id="subject" name="subject" class="mdl-textfield__input" type="text">
+							    	<label class="mdl-textfield__label" for="subject">Subject...</label>
+							  	</div>
+							  	<div class="mdl-textfield mdl-js-textfield">
+							    	<textarea id="message" name="message" class="mdl-textfield__input" type="text" rows="5"></textarea>
+							    	<label class="mdl-textfield__label" for="message">Message...</label>
+						  		</div>
+								<button id=sendEmailBtn class="mdl-button mdl-js-button mdl-js-ripple-effect" type="submit">
+									Send
+								</button>
+								<button id=cancelEmailBtn class="mdl-button mdl-js-button mdl-js-ripple-effect" onclick="cancelContactForm()">
+									Cancel
+								</button>
+							</form>
+					  </div>
+					  <!-- <div class="mdl-card__actions">
+							<button id=sendEmailBtn class="mdl-button mdl-js-button mdl-js-ripple-effect">
+								Send
+							</button>
+							<button id=cancelEmailBtn class="mdl-button mdl-js-button mdl-js-ripple-effect" onclick="cancelContactForm()">
+						  	Cancel
+							</button>
+					  </div> -->
+				</div>
+
+			</main>
+
+			<div class="footer">
+				<p> © 2016 Alfonso Almazan Ruelas. All Rights Reserved. </p>
+			</div>
 		</div>
 
 	</body>

@@ -1,96 +1,88 @@
-/* Default styles first then media queries */
-
-body{
-	background-repeat: no-repeat;
-	background-image: url("../img/home_page.jpg");
-	background-size: cover;
+.demo-layout-transparent {
+  background: url('../img/home_page_1366_768.png') center / cover;
+}
+.demo-layout-transparent .mdl-layout__header,
+.demo-layout-transparent .mdl-layout__drawer-button {
+  /* This background is dark, so we set text to white. Use 87% black instead if
+     your background is light. */
+  color: white;
 }
 
-#myPhrase {	
-	color: white;
+.mdl-layout__content{
+	position: relative;
 }
 
-#aboutMe h1{
-	text-align: center;
+.container{
+	margin: auto;
+	width: 75%;
 }
 
-#aboutMe img{	
+.aboutMeContent{
+	padding-top: 10px;
+	padding-right: 10px;
 	float: left;
 }
 
-#aboutMe p{
+#descriptionOfMe{	
+	padding-top: 10px;
+}
+
+#contactMeForm{
+	visibility: collapse;
+	position: absolute;
+	bottom:12%;
+    right:13%;
+}
+
+#contactMeForm .mdl-card__title{
+	float: right;
+}
+
+#sendEmailBtn{
+	float: left;
+}
+
+#cancelEmailBtn{
+	float: right;
+}
+
+#projectCard{
+	margin: auto;
+	width: 75%; /*75 Percent width of the screen*/
+	margin-top: 15px;
+}
+
+#contactMeBtn{
+	position:absolute;
+    bottom:5%;
+    right:5%;
+}
+
+#SocialMedia{
+	position: absolute;
+	bottom: 5%;
+	right: 40%;
+}
+
+#LinkedIn{
+	padding-top: 10px;
+	padding-right: 30px;
+	float: left;
+}
+
+#myPhrase{
+	position: absolute;
+	left: 10%;
+}
+
+#downloadResume{
+	position: absolute;
+	width: 100%;
+	bottom: 7%;
+	text-align: center;
+}
+
+.footer{
 	color: white;
-	background-color: black;
-}
-
-#resume h1{
 	text-align: center;
-}
-
-#contactMe h1{
-	text-align: center;
-}
-
-#contactMe textarea{
-	width: 50%;
-	height: 100px;
-}
-
-#cancel_form{
-	margin-left: 10px;
-}
-
-/*Web Browsers 600px or larger*/
-@media screen and (min-width: 600px)  {
-	
-}
-
-/*Web Browsers 1000px or larger*/
-@media screen and (min-width: 1000px) {
-	#aboutMe h1{
-		text-align: center;
-	}
-
-	#aboutMe p{
-		color: white;
-		background-color: black;
-		font-size: 24px;
-	}
-
-	#resume img{
-		content: url("../img/resume.jpg");
-	}
-
-	#resume h1{
-		color: white;
-	}
-
-	#aboutMe h1{
-		color: white;
-	}
-
-	#contactMe h1{
-		color: white;
-	}
-
-	#contactMe form{
-		color: white;
-	}
-
-	#contactMe textarea{
-		width: 20%;
-		height: 100px;
-	}
-
-	body{
-		background-repeat: no-repeat;
-		background-image: url("../img/home_page_1366_768.png");
-		background-size: cover;
-	}
-	
-}
-
-/*Web Browsers 1400px or larger*/
-@media screen and (min-width: 1400px) {
-	
 }

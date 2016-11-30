@@ -3,32 +3,95 @@
 
 	<head>
 		<meta name="author" content="Alfonso Almazan Ruelas">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		<link href="css/nav_bar.css" rel="stylesheet">
 		<link href="css/project.css" rel="stylesheet">
+
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-red.min.css">
+		<script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+
+		<script src="js/contact_me.js"></script>
 
 	</head>
 
 	<body>
-		<!-- Navigation Bar -->
-		<ul id="nav-bar">
-			<li><a href="index.html">Home</a></li>
-			<li><a href="about_me.html">About Me</a></li>
-			<li><a href="resume.html">Resume</a></li>
-			<li><a href="contact_me.html">Contact Me</a></li>
-		</ul>
+		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--no-desktop-drawer-button">
+			<header class="mdl-layout__header">
+				<div class="mdl-layout__header-row mdl-layout--large-screen-only">
+					<!-- Title -->
+					<span class="mdl-layout-title">Alfonso Almazan Ruelas</span>
+					<!-- Add spacer, to align navigation to the right -->
+					<div class="mdl-layout-spacer"></div>
+					<!-- Navigation -->
+					<nav class="mdl-navigation">
+						<a class="mdl-navigation__link" href="index.html">Home</a>
+						<a class="mdl-navigation__link" href="about_me.html">About Me</a>
+						<a class="mdl-navigation__link" href="resume.html">Resume</a>
+						<a class="mdl-navigation__link" href="projects.html">Projects</a>
+					</nav>
+				</div>
+			</header>
+			
+			<div class="mdl-layout__drawer">
+				<span class="mdl-layout-title">Alfonso Almazan R.</span>
+				<nav class="mdl-navigation">
+					<a class="mdl-navigation__link" href="index.html">Home</a>
+					<a class="mdl-navigation__link" href="about_me.html">About Me</a>
+					<a class="mdl-navigation__link" href="resume.html">Resume</a>
+					<a class="mdl-navigation__link" href="projects.html">Projects</a>
+				</nav>
+			</div>
 
-		<!-- About Me -->
-		<div id="aboutMe">
-			<h1>About Me</h1>
-			<aside>
-				<img src="img/me_black_white._mobile_size.jpg" alt="Picture of Myself"/>
-				<p>
-					Picking up my first book on investing at the age of 13 simply because my dad wanted to learn how the stock market worked, was one of the best decisions I could have done. At the age of 13 learning how to analyze, buy, sell, and make a profit from my computer was astonishing to me. Then at the age of 15 moving on to start my own computer repair shop business with my father, whom I respect and love, in literally what was at the time my backyard became my experience to the world of computers. Along with diving into the world of computers and technology, I enjoyed outdoor activities such as soccer, swimming, paintballing, etc. Today I continue to enjoy all of these activities as well as weightlifting and ping pong.
-				</p>
-			</aside>
-		</div>
+			<main class="mdl-layout__content">
+
+				<div class=container>
+					<img class=aboutMeContent src="img/me_black_white._mobile_size.jpg" alt="Picture of Alfonso"/>
+					<p id=descriptionOfMe>
+						At the age of 15 my own computer repair shop business with my father, whom I respect and love, in literally what was at the time my backyard became my experience to the world of computers. Along with diving into the world of computers and technology, I enjoyed outdoor activities such as soccer, swimming, paintballing, etc. Today I continue to enjoy all of these activities as well as weightlifting and ping pong.
+					</p>
+				</div>
+					
+				<button id=contactMeBtn class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" onclick="displayContactForm()">
+				  	<i class="material-icons" >contact_mail</i>
+				</button>
+
+				<div id=contactMeForm class="mdl-card mdl-shadow--16dp">
+				<div class="mdl-card__title">
+					Contact Me
+				</div>
+				<div class="mdl-card__supporting-text">
+			  		<!-- Simple Textfield -->
+					<form action="#">
+						  <div class="mdl-textfield mdl-js-textfield">
+						    	<input id="email" class="mdl-textfield__input" type="email"/>
+						    	<label class="mdl-textfield__label" for="email">Email...</label>
+						    	<span class="mdl-textfield__error">Input is not a valid email.</span>
+						  </div>
+						  <div class="mdl-textfield mdl-js-textfield">
+						    	<input id="email" class="mdl-textfield__input" type="text">
+						    	<label class="mdl-textfield__label" for="subject">Subject...</label>
+						  </div>
+						  <div class="mdl-textfield mdl-js-textfield">
+						    	<textarea id="message" class="mdl-textfield__input" type="text" rows="5"></textarea>
+						    	<label class="mdl-textfield__label" for="message">Message...</label>
+						  </div>
+					</form>
+			  	</div>
+				<div class="mdl-card__actions">
+					<button id=sendEmailBtn class="mdl-button mdl-js-button mdl-js-ripple-effect">
+						Send
+					</button>
+					<button id=cancelEmailBtn class="mdl-button mdl-js-button mdl-js-ripple-effect" onclick="cancelContactForm()">
+				  	Cancel
+					</button>
+				</div>
+			</main>
+
+			<div class="footer" style="color:black">
+				<p> © 2016 Alfonso Almazan Ruelas. All Rights Reserved. </p>
+			</div>
+
 	</body>
 
 </html>

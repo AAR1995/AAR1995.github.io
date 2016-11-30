@@ -17,8 +17,8 @@
 	</head>
 
 	<body>
-		<div class="demo-layout-transparent mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--no-desktop-drawer-button">
-			<header class="mdl-layout__header mdl-layout__header--transparent">
+		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--no-desktop-drawer-button">
+			<header class="mdl-layout__header">
 				<div class="mdl-layout__header-row mdl-layout--large-screen-only">
 					<!-- Title -->
 					<span class="mdl-layout-title">Alfonso Almazan Ruelas</span>
@@ -29,7 +29,7 @@
 						<a class="mdl-navigation__link" href="index.html">Home</a>
 						<a class="mdl-navigation__link" href="about_me.html">About Me</a>
 						<a class="mdl-navigation__link" href="resume.html">Resume</a>
-						<a class="mdl-navigation__link" href="projects.html">Projects</a>
+						<a class="mdl-navigation__link" href="#">Projects</a>
 					</nav>
 				</div>
 			</header>
@@ -40,24 +40,59 @@
 					<a class="mdl-navigation__link" href="index.html">Home</a>
 					<a class="mdl-navigation__link" href="about_me.html">About Me</a>
 					<a class="mdl-navigation__link" href="resume.html">Resume</a>
-					<a class="mdl-navigation__link" href="projects.html">Projects</a>
+					<a class="mdl-navigation__link" href="#">Projects</a>
 				</nav>
 			</div>
-
+		
 			<main class="mdl-layout__content">
-				<div id=downloadResume>
-					<a href="img/resume.pdf" download="Alfonso_Resume">
-						<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent mdl-js-ripple-effect">
-							Download Resume
-						</button>
-					</a>
+				<!-- Project Number 1 -->
+				<div id="projectCard" class="mdl-card mdl-shadow--2dp">
+					<div class="mdl-card__title">
+				    	<h2 class="mdl-card__title-text">Project 1</h2>
+				  	</div>
+				  	<div class="mdl-card__supporting-text">
+				    	Supporting text
+				  	</div>
+				  	<div class="mdl-card__actions mdl-card--border">
+				    	<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+				      		Get Started
+			    		</a>
+				  	</div>
 				</div>
 
-				<div id=contactMeBtn>
-					<button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" onclick="displayContactForm()">
-				  		<i class="material-icons" >contact_mail</i>
-					</button>
+				<!-- Project Number 2 -->
+				<div id="projectCard" class="mdl-card mdl-shadow--2dp">
+					<div class="mdl-card__title">
+				    	<h2 class="mdl-card__title-text">Project 2</h2>
+				  	</div>
+				  	<div class="mdl-card__supporting-text">
+				    	Supporting text
+				  	</div>
+				  	<div class="mdl-card__actions mdl-card--border">
+				    	<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+				      		Get Started
+			    		</a>
+				  	</div>
 				</div>
+
+				<!-- Project Number 3 -->
+				<div id="projectCard" class="mdl-card mdl-shadow--2dp">
+					<div class="mdl-card__title">
+				    	<h2 class="mdl-card__title-text">Project 3</h2>
+				  	</div>
+				  	<div class="mdl-card__supporting-text">
+				    	Supporting text
+				  	</div>
+				  	<div class="mdl-card__actions mdl-card--border">
+				    	<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+				      		Get Started
+			    		</a>
+				  	</div>
+				</div>
+
+				<button id=contactMeBtn class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" onclick="displayContactForm()">
+				  	<i class="material-icons" >contact_mail</i>
+				</button>
 
 				<div id=contactMeForm class="mdl-card">
 					  <div id=title class="mdl-card__title">
@@ -92,11 +127,12 @@
 				</div>
 			</main>
 
-			<div class="footer">
+			<div class="footer" style="color:black">
 				<p> © 2016 Alfonso Almazan Ruelas. All Rights Reserved. </p>
 			</div>
 
-		</div>			
+		</div>
+
 	</body>
 
 </html>
