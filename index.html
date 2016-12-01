@@ -93,22 +93,22 @@
 							?>
 							<form method="post" action=" ">
 							  	<div class="mdl-textfield mdl-js-textfield">
-							    	<input id="email" name="email" class="mdl-textfield__input" type="email"/>
+							    	<input name="email" class="mdl-textfield__input" type="email"/>
 							    	<label class="mdl-textfield__label" for="email">Email...</label>
 							    	<span class="mdl-textfield__error">Input is not a valid email.</span>
 							  	</div>
 							  	<div class="mdl-textfield mdl-js-textfield">
-							    	<input id="subject" name="subject" class="mdl-textfield__input" type="text">
+							    	<input name="subject" class="mdl-textfield__input" type="text">
 							    	<label class="mdl-textfield__label" for="subject">Subject...</label>
 							  	</div>
 							  	<div class="mdl-textfield mdl-js-textfield">
-							    	<textarea id="message" name="message" class="mdl-textfield__input" type="text" rows="5"></textarea>
+							    	<textarea name="message" class="mdl-textfield__input" type="text" rows="5"></textarea>
 							    	<label class="mdl-textfield__label" for="message">Message...</label>
 						  		</div>
-								<button id=sendEmailBtn class="mdl-button mdl-js-button mdl-js-ripple-effect" type="submit">
+								<button name="sendEmailBtn" class="mdl-button mdl-js-button mdl-js-ripple-effect" type="submit">
 									Send
 								</button>
-								<button id=cancelEmailBtn class="mdl-button mdl-js-button mdl-js-ripple-effect" onclick="cancelContactForm()">
+								<button name="cancelEmailBtn" class="mdl-button mdl-js-button mdl-js-ripple-effect" onclick="cancelContactForm()">
 									Cancel
 								</button>
 							</form>
