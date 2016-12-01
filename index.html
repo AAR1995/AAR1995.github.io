@@ -69,48 +69,20 @@
 					  <div class="mdl-card__supporting-text">
 					  		<!-- Simple Textfield -->
 					  		<?php 
-								if(isset($_POST['sendEmailBtn'])){
+								if(isset($_POST['submit'])){
 								    $to = "almazanruelas@gmail.com"; // this is your Email address
 								    echo $to;
 								    $from = $_POST['email']; // this is the sender's Email address
 								    echo $from;
-								    $first_name = "Alfonso";
-								    $last_name = "Almazan";
-								    $subject = "Form submission";
-								    echo $subject;
-								    // $subject2 = "Copy of your form submission";
-								    $message = $first_name . " " . $last_name . " wrote the following:" . "\n\n" . $_POST['message'];
-								    echo $message
-								    // $message2 = "Here is a copy of your message " . $first_name . "\n\n" . $_POST['message'];
-
-								    $headers = "From:" . $from;
-								    // $headers2 = "From:" . $to;
-								    // mail($to,$subject,$message,$headers);
-								    // mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
-								    echo "Mail Sent. Thank you " . $first_name . ", we will contact you shortly.";
-								    // You can also use header('Location: thank_you.php'); to redirect to another page.
+								    echo $_Post['message'];
 								}
 							?>
 							<form method="post" action=" ">
-							  	<div class="mdl-textfield mdl-js-textfield">
-							    	<input name="email" class="mdl-textfield__input" type="email"/>
-							    	<label class="mdl-textfield__label" for="email">Email...</label>
-							    	<span class="mdl-textfield__error">Input is not a valid email.</span>
-							  	</div>
-							  	<div class="mdl-textfield mdl-js-textfield">
-							    	<input name="subject" class="mdl-textfield__input" type="text">
-							    	<label class="mdl-textfield__label" for="subject">Subject...</label>
-							  	</div>
-							  	<div class="mdl-textfield mdl-js-textfield">
-							    	<textarea name="message" class="mdl-textfield__input" type="text" rows="5"></textarea>
-							    	<label class="mdl-textfield__label" for="message">Message...</label>
-						  		</div>
-								<button name="sendEmailBtn" class="mdl-button mdl-js-button mdl-js-ripple-effect" type="submit">
+								<input type="email" name="email"/>
+								<input type="text" name="message"/>
+								<input name="submit" class="mdl-button mdl-js-button mdl-js-ripple-effect" type="submit">
 									Send
-								</button>
-								<button name="cancelEmailBtn" class="mdl-button mdl-js-button mdl-js-ripple-effect" onclick="cancelContactForm()">
-									Cancel
-								</button>
+								</input>
 							</form>
 					  </div>
 					  <!-- <div class="mdl-card__actions">
