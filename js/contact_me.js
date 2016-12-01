@@ -20,3 +20,17 @@ function displayContactForm(){
 function cancelContactForm(){
 	document.getElementById("contactMeForm").style.visibility = "collapse";
 }
+
+function send_email(){
+	$.ajax({
+		url: "form_to_email.php",
+		type: "POST",
+		data: {email:email, message:message},
+		success: function(data, textStatus, jqXHR){
+			console.log("success");
+		},
+		error: function (jqXHR, textStatus, errorThrown){
+			alert('Error!')
+		}
+	});
+}

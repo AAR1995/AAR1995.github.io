@@ -1,87 +1,23 @@
-<?php
- 
-if(isset($_POST['email'])) {
- 
-     
- 
-    // EDIT THE 2 LINES BELOW AS REQUIRED
- 
-    $email_to = "almazanruelas@gmail.com";
- 
-    $email_subject = $_POST['subject'];
- 
-     
- 
-     
- 
-    function died($error) {
- 
-        // your error code can go here
- 
-        echo "We are very sorry, but there were error(s) found with the form you submitted. ";
- 
-        echo "These errors appear below.<br /><br />";
- 
-        echo $error."<br /><br />";
- 
-        echo "Please go back and fix these errors.<br /><br />";
- 
-        die();
- 
-    }
- 
-     
- 
-     
- 
-    $email_from = $_POST['email']; // required
- 
-    $message = $_POST['message']; // required
- 
-     
- 
-    $error_message = "";
- 
+<?php 
+if(isset($_POST['sendEmailBtn'])){
+    $to = "almazanruelas@gmail.com"; // this is your Email address
+    echo $to;
+    $from = $_POST['email']; // this is the sender's Email address
+    echo $from;
+    $first_name = "Alfonso";
+    $last_name = "Almazan";
+    $subject = "Form submission";
+    echo $subject;
+    // $subject2 = "Copy of your form submission";
+    $message = $first_name . " " . $last_name . " wrote the following:" . "\n\n" . $_POST['message'];
+    echo $message
+    // $message2 = "Here is a copy of your message " . $first_name . "\n\n" . $_POST['message'];
 
-  if(strlen($error_message) > 0) {
- 
-    died($error_message);
- 
-  }
-   
- 
-    function clean_string($string) {
- 
-      $bad = array("content-type","bcc:","to:","cc:","href");
- 
-      return str_replace($bad,"",$string);
- 
-    }
- 
- // create email headers
- 
-$headers = 'From: '.$email_from."\r\n".
- 
-'Reply-To: '.$email_from."\r\n" .
- 
-'X-Mailer: PHP/' . phpversion();
- 
-@mail($email_to, $email_subject, $message, $headers);  
- 
-?>
- 
- 
- 
-<!-- include your own success html here -->
- 
- 
- 
-Thank you for contacting us. We will be in touch with you very soon.
- 
- 
- 
-<?php
- 
+    $headers = "From:" . $from;
+    // $headers2 = "From:" . $to;
+    // mail($to,$subject,$message,$headers);
+    // mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
+    echo "Mail Sent. Thank you " . $first_name . ", we will contact you shortly.";
+    // You can also use header('Location: thank_you.php'); to redirect to another page.
 }
- 
 ?>

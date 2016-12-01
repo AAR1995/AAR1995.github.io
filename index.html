@@ -1,23 +1,3 @@
-<?php 
-if(isset($_POST['submit'])){
-    $to = "almazanruelas@gmail.com"; // this is your Email address
-    $from = $_POST['email']; // this is the sender's Email address
-    $first_name = "Alfonso";
-    $last_name = "Almazan";
-    $subject = "Form submission";
-    $subject2 = "Copy of your form submission";
-    $message = $first_name . " " . $last_name . " wrote the following:" . "\n\n" . $_POST['message'];
-    $message2 = "Here is a copy of your message " . $first_name . "\n\n" . $_POST['message'];
-
-    $headers = "From:" . $from;
-    $headers2 = "From:" . $to;
-    mail($to,$subject,$message,$headers);
-    mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
-    echo "Mail Sent. Thank you " . $first_name . ", we will contact you shortly.";
-    // You can also use header('Location: thank_you.php'); to redirect to another page.
-    }
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,6 +12,7 @@ if(isset($_POST['submit'])){
 		<link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-red.min.css">
 		<script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
 
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 		<script src="js/contact_me.js"></script>
 
 	</head>
@@ -67,9 +48,7 @@ if(isset($_POST['submit'])){
 			<main class="mdl-layout__content">
 				<div id=SocialMedia>
 					<a id=LinkedIn href="https://www.linkedin.com/pub/alfonso-almazan-ruelas/130/382/a7b" target="_blank">
-	      
 				          <img src="https://static.licdn.com/scds/common/u/img/webpromo/btn_viewmy_160x33.png" alt="View Alfonso Almazan Ruelas's profile on LinkedIn">
-				        
 				    </a>
 			   
 			    	<a href="https://www.facebook.com/alfonso.almazan.16" target="_blank">
@@ -89,7 +68,30 @@ if(isset($_POST['submit'])){
 					  </div>
 					  <div class="mdl-card__supporting-text">
 					  		<!-- Simple Textfield -->
-							<form method="post" action="">
+					  		<?php 
+								if(isset($_POST['sendEmailBtn'])){
+								    $to = "almazanruelas@gmail.com"; // this is your Email address
+								    echo $to;
+								    $from = $_POST['email']; // this is the sender's Email address
+								    echo $from;
+								    $first_name = "Alfonso";
+								    $last_name = "Almazan";
+								    $subject = "Form submission";
+								    echo $subject;
+								    // $subject2 = "Copy of your form submission";
+								    $message = $first_name . " " . $last_name . " wrote the following:" . "\n\n" . $_POST['message'];
+								    echo $message
+								    // $message2 = "Here is a copy of your message " . $first_name . "\n\n" . $_POST['message'];
+
+								    $headers = "From:" . $from;
+								    // $headers2 = "From:" . $to;
+								    // mail($to,$subject,$message,$headers);
+								    // mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
+								    echo "Mail Sent. Thank you " . $first_name . ", we will contact you shortly.";
+								    // You can also use header('Location: thank_you.php'); to redirect to another page.
+								}
+							?>
+							<form method="post" action=" ">
 							  	<div class="mdl-textfield mdl-js-textfield">
 							    	<input id="email" name="email" class="mdl-textfield__input" type="email"/>
 							    	<label class="mdl-textfield__label" for="email">Email...</label>
