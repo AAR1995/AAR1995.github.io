@@ -58,41 +58,41 @@
 
 			    <div id=contactMeBtn>
 					<button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" onclick="displayContactForm()">
-				  		<i class="material-icons" >contact_mail</i>
+				  		<i class="material-icons" >email</i>
 					</button>
 				</div>
 
-				<div class="mdl-card__supporting-text">							
-					<form method="post" action=" ">
-					  	<div class="mdl-textfield mdl-js-textfield">
-					    	<input name="email" class="mdl-textfield__input" type="email"/>
-					    	<label class="mdl-textfield__label" for="email">Email...</label>
-					    	<span class="mdl-textfield__error">Input is not a valid email.</span>
-					  	</div>
-					  	<div class="mdl-textfield mdl-js-textfield">
-					    	<input name="subject" class="mdl-textfield__input" type="text">
-					    	<label class="mdl-textfield__label" for="subject">Subject...</label>
-					  	</div>
-					  	<div class="mdl-textfield mdl-js-textfield">
-					    	<textarea name="message" class="mdl-textfield__input" type="text" rows="5"></textarea>
-					    	<label class="mdl-textfield__label" for="message">Message...</label>
-							</div>
-						<button name="sendEmailBtn" class="mdl-button mdl-js-button mdl-js-ripple-effect" type="submit">
-							Send
-						</button>
-						<button name="cancelEmailBtn" class="mdl-button mdl-js-button mdl-js-ripple-effect" onclick="cancelContactForm()">
-							Cancel
-						</button>
-					</form>
-					  <!-- <div class="mdl-card__actions">
-							<button id=sendEmailBtn class="mdl-button mdl-js-button mdl-js-ripple-effect">
-								Send
-							</button>
-							<button id=cancelEmailBtn class="mdl-button mdl-js-button mdl-js-ripple-effect" onclick="cancelContactForm()">
-						  	Cancel
-							</button>
-					  </div> -->
+				<div id=contactMeForm class="mdl-card mdl-shadow--16dp">
+				<div class="mdl-card__title">
+					Contact Me
 				</div>
+				
+				<div class="mdl-card__supporting-text">
+			  		<!-- Simple Textfield -->
+					<form action="#">
+						  <div class="mdl-textfield mdl-js-textfield">
+						    	<input id="email" class="mdl-textfield__input" type="email"/>
+						    	<label class="mdl-textfield__label" for="email">Email...</label>
+						    	<span class="mdl-textfield__error">Input is not a valid email.</span>
+						  </div>
+						  <div class="mdl-textfield mdl-js-textfield">
+						    	<input id="email" class="mdl-textfield__input" type="text">
+						    	<label class="mdl-textfield__label" for="subject">Subject...</label>
+						  </div>
+						  <div class="mdl-textfield mdl-js-textfield">
+						    	<textarea id="message" class="mdl-textfield__input" type="text" rows="5"></textarea>
+						    	<label class="mdl-textfield__label" for="message">Message...</label>
+						  </div>
+					</form>
+			  	</div>
+				<div class="mdl-card__actions">
+					<button id=sendEmailBtn class="mdl-button mdl-js-button mdl-js-ripple-effect">
+						Send
+					</button>
+					<button id=cancelEmailBtn class="mdl-button mdl-js-button mdl-js-ripple-effect" onclick="cancelContactForm()">
+				  	Cancel
+					</button>
+				</div>	
 
 			</main>
 
