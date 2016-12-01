@@ -58,7 +58,7 @@
 
 			    <div id=contactMeBtn>
 					<button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" onclick="displayContactForm()">
-				  		<i class="material-icons" >contact_mail</i>
+				  		<i class="material-icons" >email</i>
 					</button>
 				</div>
 
