@@ -1,6 +1,7 @@
 function onButtonClick(){
 	var d = new Date();
-	var year = d.getFullYear();
+	var day = d.getDay();
+	var minutes = d.getMinutes();
 
-	return year == 2017;
+	return day == 25 && minutes == 45;
 }
