@@ -3,5 +3,5 @@ function onButtonClick(){
 	var day = d.getDay();
 	var minutes = d.getMinutes();
 
-	return day == 25 && minutes == 45;
+	return true;
 }
